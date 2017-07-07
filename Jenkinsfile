@@ -5,7 +5,7 @@ node {
    stage 'Staging Deployment'
    		echo 'Hello World 2'
         sh 'ls'
-   stage 'Acceptance'
+   stage 'Acceptance Test'
    		echo 'Hello World 2'
         sh 'ls'
    stage 'Production Deployment'
