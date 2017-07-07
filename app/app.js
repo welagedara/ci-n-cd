@@ -12,7 +12,7 @@ app.get('/p/:tagId', function(req, res) {
 */
 
 app.get('/', function (req, res) {
-  res.send('[GET]Hello World.!from ' + require('os').hostname());
+  res.send('[GET]Hello World! from ' + require('os').hostname());
 });
 
 app.post('/', function(req, res) {
