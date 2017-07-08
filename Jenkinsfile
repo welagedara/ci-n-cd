@@ -13,5 +13,5 @@ node {
         sh 'cd acceptance && sudo ./runAcceptanceTest.sh'
    stage 'Deployment'
 		echo 'Running deplyment'
-        sh 'cd deplyment && sudo ./runDockerContainer.sh'
+        sh 'cd deployment && sudo ./runDockerContainer.sh'
 }
