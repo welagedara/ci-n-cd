@@ -12,6 +12,6 @@ then
 	docker rm -f $CONTAINER_NAME
 fi
 
-docker pull $DOCKER_REPO
+#docker pull $DOCKER_REPO
 docker run -d --name $CONTAINER_NAME -e SERVICE_NAME=$SERVICE_NAME -e SERVICE_TAGS=rest -p :3000 $DOCKER_REPO
 
