@@ -2,6 +2,7 @@
 node {
    stage 'Build'
    		echo 'Building the app'
+   		git credentialsId: '9651666f-774b-4077-add8-98f14eebd337', url: 'https://github.com/station1-demo-org/microservice.git'
    		sh 'pwd'
    		sh 'ls'
    		sh 'cd microservice/app'
