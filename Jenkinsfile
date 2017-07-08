@@ -12,6 +12,6 @@ node {
    		echo 'Running acceptance test'
         sh 'cd acceptance && sudo ./runAcceptanceTest.sh'
    stage 'Deployment'
-   		echo 'Hello World 2'
-        sh 'ls'
+		echo 'Running deplyment'
+        sh 'cd deplyment && sudo ./runDockerContainer.sh'
 }
