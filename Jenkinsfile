@@ -1,7 +1,13 @@
 
 node {
    stage 'Build'
-   		echo 'Hello World 1'
+   		echo 'Building the app'
+   		sh 'cd app'
+   		sh 'sudo docker rmi localhost:5000/app || ls'
+   		sh 'sudo docker rmi $(sudo docker images -f "dangling=true" -q) || ls'
+   		sh 'sudo docker build -t app .'
+   		sh 'sudo docker tag -f app localhost:5000/app'
+   		sh 'sudo docker push localhost:5000/app'
    stage 'Staging Deployment'
    		echo 'Hello World 2'
         sh 'ls'
