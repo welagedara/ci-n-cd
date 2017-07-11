@@ -4,7 +4,7 @@ DOCKER_REPO=localhost:5000/app
 TAG=0.0.1-SNAPSHOT
 CONTAINER_NAME=acceptance
 SERVICE_NAME=demo_acceptance/v1
-ENDPOINT=http://52.177.172.169/demo_acceptance/v1
+ENDPOINT=http://52.179.157.125/demo_acceptance/v1
 
 containerId=`docker ps -qa --filter "name=$CONTAINER_NAME"`
 if [ -n "$containerId" ]
