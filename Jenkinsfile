@@ -6,7 +6,7 @@ node {
    		sh 'sudo docker rmi localhost:5000/app || ls'
    		sh 'sudo docker rmi $(sudo docker images -f "dangling=true" -q) || ls'
    		sh 'cd app && sudo docker build -t app .'
-   		sh 'sudo docker tag -f app localhost:5000/app'
+   		sh 'sudo docker tag app localhost:5000/app'
    		sh 'sudo docker push localhost:5000/app'
    stage 'Acceptance Test'
    		echo 'Running acceptance test'
