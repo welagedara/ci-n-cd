@@ -18,7 +18,7 @@ docker pull $DOCKER_REPO
 docker run -d --name $CONTAINER_NAME -e SERVICE_NAME=$SERVICE_NAME -e SERVICE_TAGS=rest -p :3000 $DOCKER_REPO
 
 # Give  seconds for consul to register
-sleep 30
+sleep 60
 
 OUTPUT="$(curl -Is $ENDPOINT | head -1)"
 echo "${OUTPUT}"
