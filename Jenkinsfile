@@ -2,7 +2,7 @@
 node {
    stage 'Build'
    		echo 'Building the app'
-   		git credentialsId: '15390682-b3f8-4a91-9cec-7684d7cb7b2a', url: 'https://github.com/welagedara/ci-n-cd/ci-n-cd.git'
+   		git credentialsId: '15390682-b3f8-4a91-9cec-7684d7cb7b2a', url: 'https://github.com/welagedara/ci-n-cd.git'
    		sh 'sudo docker rmi localhost:5000/app || ls'
    		sh 'sudo docker rmi $(docker images | grep "^<none>" | awk "{print $3}") || ls'
    		//sh 'sudo docker rmi $(sudo docker images -f "dangling=true" -q) || ls'
