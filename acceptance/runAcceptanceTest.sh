@@ -4,7 +4,7 @@ DOCKER_REPO=localhost:5000/app
 TAG=0.0.1-SNAPSHOT
 CONTAINER_NAME=acceptance
 SERVICE_NAME=demo_acceptance/v1
-ENDPOINT=http://52.179.157.125/demo_acceptance/v1
+ENDPOINT=http://52.225.225.230/demo_acceptance/v1
 
 containerId=`docker ps -qa --filter "name=$CONTAINER_NAME"`
 if [ -n "$containerId" ]
@@ -17,7 +17,7 @@ fi
 docker pull $DOCKER_REPO
 docker run -d --name $CONTAINER_NAME -e SERVICE_NAME=$SERVICE_NAME -e SERVICE_TAGS=rest -p :3000 $DOCKER_REPO
 
-# Give  seconds for consul to register
+# Give  60 seconds for consul to register
 sleep 60
 
 OUTPUT="$(curl -Is $ENDPOINT | head -1)"
